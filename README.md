@@ -110,9 +110,44 @@
 > > awk '{ print $1 }' ./학생부.txt
 > > ```
 > > ```
+> > name
 > > Kim
 > > Moon
 > > Park
 > > Oh
 > > Hong
+> > ```
+> > ```
+> > awk '{ print $1,$4 }' ./학생부.txt
+> > ```
+> > ```
+> > name sex
+> > Kim M
+> > Moon W
+> > Park W
+> > Oh M
+> > Hong M
+> > ```
+> 
+> > #### ● **특정 포함된 출력**
+> > 사용자가 원하는 문자열이 포함된 부분을 출력 할 수도 있다.
+> > ```
+> > awk `/Moon/' ./학생부.txt
+> > ```
+> > ```
+> > Moon 1998-01-15 010-2035-5566 W 2
+> > ```
+> 
+> > #### ● **출력에 내용 첨가하기**
+> > 원하는 내용을 첨가하여 출력이 가능하다
+> > ```
+> > awk '{ print ("name : " $1, ", "  "birth : " $2) }' ./학생부.txt
+> > ```
+> > ```
+> > name : name, birth : birth
+> > name : Kim , birth : 1999-02-17
+> > name : Moon, birth : 1998-01-15
+> > name : Park, birth : 1999-05-22
+> > name : Oh, birth : 1995-09-14
+> > name : Hong, birth : 1996-11-11
 > > ```
