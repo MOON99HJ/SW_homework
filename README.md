@@ -89,7 +89,16 @@
 > > ```
 > > $ command -a -b -- -c
 > > ```
-> > 
+> 
+> >  #### ● **getopt 결과**
+> >  getopt가 처리가 완료된다면 option를 리턴하게 된다.           
+> >  option-argument가 존재하면 optarg에 설정한다.         
+> >  에러가 발생하면 '?'을 리턴한다.         
+> >  
+> >  #### ● **Error 발생의 원인**
+> >  '-'로 시작하는 문자열이지만 option character가 없는 경우         
+> >  option-argument를 갖는 option이지만 option-character가 없는 경우         
+> >  또한 다음으로 처리할 option이 없어진 경우 -1을 리턴한다.         
         
 
 
